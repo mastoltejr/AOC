@@ -134,9 +134,9 @@ monkeys <<- lapply(monkeys, function(m) {
   divisors <<- c(divisors,as.numeric(substring(m[4],22)))
   
   list(name = m[1]
-      ,items=options[(length(itemMap)-length(items)+1):length(itemMap)]
-      ,operation = interpretOperation(m[3])
-      ,action = interpretAction(m[4],m[5],m[6])
+       ,items=options[(length(itemMap)-length(items)+1):length(itemMap)]
+       ,operation = interpretOperation(m[3])
+       ,action = interpretAction(m[4],m[5],m[6])
   )
 })
 
@@ -162,13 +162,8 @@ while(i <= 10000){
   }
   # print(paste0('============== ',i,' ===================='))
   # print(counts)
-
+  
   i <- i + 1
 }
 
 prod(tail(sort(counts),2))
-
-
-
-
-
